@@ -1,59 +1,206 @@
-# PomodoroTimer
+# Pomodoro Timer Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+A modern, customizable Pomodoro Timer built with Angular 17 using standalone components and Material Design.
 
-## Development server
+![Pomodoro Timer Screenshot]
+[]
 
-To start a local development server, run:
+## 🌟 Features
+
+- **Three Timer Types**
+  - Focus Time (25 minutes)
+  - Short Break (5 minutes)
+  - Long Break (15 minutes)
+
+- **Visual Features**
+  - Circular progress indicator
+  - Session progress dots
+  - Intuitive control buttons
+  - Material Design UI
+  - Responsive layout
+
+- **Core Functionality**
+  - Automatic timer transitions
+  - Customizable durations
+  - Session tracking
+  - Visual and tooltip feedback
+  - State management using RxJS
+
+## 🛠️ Technical Stack
+
+- Angular 17 (Standalone Components)
+- Angular Material
+- RxJS
+- TypeScript
+
+## 🏗️ Architecture
+
+### Component Structure
+
+```
+src/
+  ├── app/
+  │   ├── components/
+  │   │   ├── timer-container/
+  │   │   ├── timer-card/
+  │   │   └── settings-dialog/
+  │   ├── shared/
+  │   │   ├── circular-timer/
+  │   │   ├── control-buttons/
+  │   │   ├── progress-dots/
+  │   │   └── material.module.ts
+  │   ├── services/
+  │   │   ├── timer.service.ts
+  │   │   └── settings.service.ts
+  │   └── types/
+  │       └── timer.types.ts
+```
+
+### Key Components
+
+1. **TimerContainerComponent**
+
+- Main container handling layout
+- Manages multiple timer instances
+- Responsive grid system
+
+2. **TimerCardComponent**
+
+- Individual timer display
+- State management
+- User interactions
+
+3. **CircularTimerComponent**
+
+- Visual countdown display
+- Progress indication
+- Material progress spinner integration
+
+### Services
+
+1. **TimerService**
+
+- Core timer logic
+- State management using BehaviorSubject
+- Timer transitions
+- Session tracking
+
+2. **SettingsService**
+
+- Timer duration management
+- Settings persistence
+- Configuration updates
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone [repository-url]
+cd pomodoro-timer
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run the development server
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Navigate to `http://localhost:4200/`
 
-## Code scaffolding
+## 💡 Usage
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Starting a Timer**
 
-```bash
-ng generate component component-name
-```
+- Click the play button to start
+- Timer automatically transitions to breaks
+- Progress dots show completed sessions
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. **Customizing Durations**
 
-```bash
-ng generate --help
-```
+- Click the settings icon
+- Adjust durations for each timer type
+- Save changes to update immediately
 
-## Building
+3. **Timer Controls**
 
-To build the project run:
+- Play/Pause: Start or pause current timer
+- Skip: Move to next timer
+- Reset: Return timer to initial state
 
-```bash
-ng build
-```
+## 🎨 Customization
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Timer Durations
 
-## Running unit tests
+Modify default durations in the settings:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Focus Time: 1-60 minutes
+- Short Break: 1-30 minutes
+- Long Break: 1-45 minutes
 
-```bash
-ng test
-```
+### Themes
 
-## Running end-to-end tests
+The application uses Material Design themes with custom colors:
 
-For end-to-end (e2e) testing, run:
+- Focus Timer: #E57373 (Red)
+- Short Break: #4DB6AC (Teal)
+- Long Break: #5C6BC0 (Blue)
 
-```bash
-ng e2e
-```
+## 🤝 Contributing
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Additional Resources
+## 📝 Design Decisions
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Standalone Components**
+
+- Better tree-shaking
+- Simplified dependency management
+- Improved lazy loading
+
+2. **RxJS for State Management**
+
+- Reactive state updates
+- Simplified data flow
+- Better state synchronization
+
+3. **Material Design**
+
+- Consistent UI/UX
+- Built-in accessibility
+- Responsive components
+
+[//]: # (## 📚 Future Enhancements)
+
+[//]: # ()
+
+[//]: # (- [ ] Sound notifications)
+
+[//]: # (- [ ] Task tracking)
+
+[//]: # (- [ ] Statistics dashboard)
+
+[//]: # (- [ ] Dark/Light theme toggle)
+
+[//]: # (- [ ] Custom color themes)
+
+[//]: # (- [ ] Session history)
+
+[//]: # (- [ ] Export statistics)
