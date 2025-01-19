@@ -1,0 +1,15 @@
+.timer-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.time-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}

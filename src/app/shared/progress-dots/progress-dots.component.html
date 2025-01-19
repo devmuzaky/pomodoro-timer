@@ -1,0 +1,7 @@
+<div class="dots-container">
+  <div
+    *ngFor="let dot of dots; let i = index"
+    [class.active]="i < current"
+    class="dot">
+  </div>
+</div>

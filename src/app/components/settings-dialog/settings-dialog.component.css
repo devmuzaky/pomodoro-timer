@@ -1,0 +1,14 @@
+.settings-dialog {
+  padding: 1rem;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 300px;
+}
+
+mat-form-field {
+  width: 100%;
+}

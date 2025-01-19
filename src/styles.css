@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/*make the gerneral styles*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f 0%, #2d2b42 100%);
+}
+
+
+.mat-mdc-tooltip {
+  .mdc-tooltip__surface {
+    background: white !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+}

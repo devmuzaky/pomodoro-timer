@@ -1,0 +1,31 @@
+<mat-card [ngStyle]="getBackgroundStyle()" class="timer-card">
+  <mat-card-header>
+    <mat-card-title>{{ timer.type }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="card-content">
+    <app-circular-timer
+      [color]="timer.color"
+      [currentTime]="timer.currentTime"
+      [totalTime]="timer.duration">
+    </app-circular-timer>
+
+    <app-control-buttons
+      (actionClick)="handleAction($event)"
+      [isRunning]="timer.state === TimerState.RUNNING">
+    </app-control-buttons>
+
+    <app-progress-dots
+      [current]="timer.sessions"
+      [total]="timer.totalSessions">
+    </app-progress-dots>
+  </mat-card-content>
+
+  <button
+    [matTooltip]="getHelpText()"
+    aria-label="Help"
+    class="help-button"
+    mat-icon-button>
+    <mat-icon>help_outline</mat-icon>
+  </button>
+</mat-card>

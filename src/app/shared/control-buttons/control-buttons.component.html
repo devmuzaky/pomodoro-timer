@@ -1,0 +1,18 @@
+<div class="controls">
+  <button
+    (click)="handleClick(isRunning ? 'pause' : 'start')"
+    [color]="'primary'"
+    class="control-button"
+    mat-fab>
+    <mat-icon>{{ isRunning ? 'pause' : 'play_arrow' }}</mat-icon>
+  </button>
+
+  <button
+    (click)="handleClick('skip')"
+    [color]="'accent'"
+    class="control-button"
+    mat-mini-fab
+    matTooltip="Skip to next">
+    <mat-icon>skip_next</mat-icon>
+  </button>
+</div>

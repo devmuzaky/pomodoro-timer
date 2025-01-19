@@ -1,0 +1,16 @@
+<div class="app-container">
+  <header class="header">
+    <h1>Pomodoro Timer</h1>
+    <button (click)="openSettings()" class="settings-button" mat-icon-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+  </header>
+
+  <div class="timer-container">
+    <app-timer-card
+      (timerAction)="handleTimerAction($event)"
+      *ngFor="let timer of timers$ | async"
+      [timer]="timer">
+    </app-timer-card>
+  </div>
+</div>

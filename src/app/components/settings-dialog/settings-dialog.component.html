@@ -1,0 +1,27 @@
+<div class="settings-dialog">
+  <h2 mat-dialog-title>Timer Settings</h2>
+
+  <mat-dialog-content>
+    <div class="settings-form">
+      <mat-form-field appearance="fill">
+        <mat-label>Focus Duration (minutes)</mat-label>
+        <input [(ngModel)]="focusDuration" matInput min="1" type="number">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Short Break Duration (minutes)</mat-label>
+        <input [(ngModel)]="shortBreakDuration" matInput min="1" type="number">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Long Break Duration (minutes)</mat-label>
+        <input [(ngModel)]="longBreakDuration" matInput min="1" type="number">
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button (click)="saveSettings()" color="primary" mat-button>Save</button>
+  </mat-dialog-actions>
+</div>
